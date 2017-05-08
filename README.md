@@ -1,4 +1,4 @@
-## learnJavaScript
+## Learn JavaScript
 
 - [Типы данных](#Типы-данных)
 - [Строки](#Строки)

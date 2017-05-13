@@ -309,6 +309,23 @@ person.height; // 178
 ```
 
 
+## ES6
+В ES6 если название свойств совпадает со значением, то мы можем писать только значение
+```javascript
+let firstName = 'Bill',
+    lastName = 'Gates',
+    email = 'bill@microsoft.com';
+    
+let persone = {
+	firstName,
+	lastName,
+	email;
+}
+
+console.log(persone);
+```
+
+
 ## Прототипы объектов 
 Объекты в JavaScript можно организовать в цепочки так, чтобы свойство, не найденное в одном объекте, автоматически искалось бы в другом.
 

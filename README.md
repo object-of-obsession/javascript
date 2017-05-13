@@ -940,7 +940,7 @@ function createEmail(to, from, subject, message) {
 		From: ${to},
 		Subject: ${subject},
 		Message: ${message}
-	` )
+	`)
 }
 
 createEmail(akarelin@yamoney.ru, mikhail@koloskov.kz, Привет!, Как дела?);

@@ -935,12 +935,12 @@ add(...numbers);
 Поддерживают многострочность, интерполяцию выражений и тегирование.
 ```javascript
 function createEmail(to, from, subject, message) {
-	console.log('
+	console.log(` 
 		To: ${to},
 		From: ${to},
 		Subject: ${subject},
 		Message: ${message}
-	')
+	` )
 }
 
 createEmail(akarelin@yamoney.ru, mikhail@koloskov.kz, Привет!, Как дела?);

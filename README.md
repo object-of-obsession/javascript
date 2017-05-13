@@ -946,3 +946,16 @@ function createEmail(to, from, subject, message) {
 createEmail(akarelin@yamoney.ru, mikhail@koloskov.kz, Привет!, Как дела?);
 ```
 
+## Параметры функции
+```javascript
+function great(greating = "Hello" name="friend") {
+	console.log(`{$greating}, {$name}`)
+}
+
+great('Hi', 'Bill');
+great('Hi');
+great('undefined', 'Bill');
+great();
+```
+
+

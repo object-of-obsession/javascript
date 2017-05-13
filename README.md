@@ -9,6 +9,7 @@
 - [Прототипы объектов](#Прототипы-объектов)
 - [Циклы](#Циклы)
 - [Функции](#Функции)
+- [Параметры функции](#Параметры-функции)
 - [Стрелочные функции](#Стрелочные-функции)
 - [Сallback](#callback)
 - [Классы](#Классы)
@@ -495,8 +496,20 @@ IIFE - Immediately Invoked Function Expression
 (() => console.log('IIFE'))();
 ```
 
-
 /* Написать про практическое применение стрелочных функций с Массивами */
+
+
+## Параметры функции
+```javascript
+function great(greating = "Hello" name="friend") {
+	console.log(`{$greating}, {$name}`);
+}
+
+great('Hi', 'Bill');
+great('Hi');
+great('undefined', 'Bill');
+great();
+```
 
 
 ## Callback
@@ -945,17 +958,3 @@ function createEmail(to, from, subject, message) {
 
 createEmail(akarelin@yamoney.ru, mikhail@koloskov.kz, Привет!, Как дела?);
 ```
-
-## Параметры функции
-```javascript
-function great(greating = "Hello" name="friend") {
-	console.log(`{$greating}, {$name}`)
-}
-
-great('Hi', 'Bill');
-great('Hi');
-great('undefined', 'Bill');
-great();
-```
-
-

@@ -309,8 +309,9 @@ person.height; // 178
 ```
 
 
-## ES6
-В ES6 если название свойств совпадает со значением, то мы можем писать только значение
+### ES6
+В ES6 если название свойств совпадает со значением, то мы можем писать только значение.
+Геттер и Сеттер записываются короче.
 ```javascript
 let firstName = 'Bill',
     lastName = 'Gates',
@@ -319,7 +320,13 @@ let firstName = 'Bill',
 let persone = {
 	firstName,
 	lastName,
-	email;
+	email,
+	get fullName() {
+		return this.firstName + ' ' + this.lastName;
+	},
+	set fullName(value) {
+		this.firstName = value;
+	}
 }
 
 console.log(persone);

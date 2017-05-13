@@ -905,3 +905,26 @@ sum = doubleDecorator(sum);
 
 alert( sum(1,2) ); //6
 ```
+
+
+## Оператор разворота (spread operator)
+Допустим имеется два массива и мы хоти перенести элементы певого массива во второй. Для этого мы и можем исполтзовать оператор рзворота, который развернет первый массив и вставит его значения во второй.
+
+```javascript
+let staticLanguages = ['C', 'C++', 'Java'];
+let dynamicLanguages = ['Java', 'PHP', 'Ruby'];
+let languages = [ ...staticLanguages, 'C#', ...dynamicLanguages, 'Python'];
+console.log(languages);
+```
+
+Еще один пример, допустим имеется массив let array = [1,2,3] и есть функция doSomething (X,X,X), функция принимает три аргкмента и у массива есть три элемента. Сам массив отправить в функцию мы не можем но мы можем развернуть массив в аргуметы функции используя оператор разворота.
+
+```javascript
+function add(x, y, z) {
+	console.log( x + y + z);
+}
+
+let numbers = [1, 2, 3];
+
+add(...numbers);
+```

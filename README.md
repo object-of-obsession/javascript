@@ -315,6 +315,24 @@ person.name; // 'Peter'
 person.height; // 178
 ```
 
+### Копирование одного объекта в другой
+```javascript
+var name = {
+	first: 'Mike',
+	second: 'Will
+};
+
+var karma = {
+	status: 'top',
+	role: 'admin'
+};
+
+Object.assign(name, karma);  // Object.assign(target, ...sources)
+
+
+```
+
+
 
 ### ES6
 В ES6 если название свойств совпадает со значением, то мы можем писать только значение.

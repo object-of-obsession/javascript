@@ -328,7 +328,7 @@ person.height; // 178
 ```javascript
 var name = {
 	first: 'Mike',
-	second: 'Will
+	second: 'Will'
 };
 
 var karma = {
@@ -343,7 +343,7 @@ Object.assign(name, karma);  // Object.assign(target, ...sources)
 ```javascript
 var name = {
 	first: 'Mike',
-	second: 'Will
+	second: 'Will'
 };
 
 Object.луны(name);  // [first, second]
@@ -352,11 +352,31 @@ Object.луны(name);  // [first, second]
 ### Атрибуты свойств (Object.defineProperty)
 ...
 
-### Get
-...
 
-### Set
-...
+## Get/Set
+```javascript
+class GetThings {
+  constructor(size) {
+    this.length = size;
+  }
+  
+  get Length() {
+    return this.length;
+  }
+  
+  set Lenght(value) {
+    this.length = value;
+    console.log('Значение установленно');
+  }  
+}
+
+/*
+var thing = new GetThings(9);
+thing.Length;
+thing.Length = 10;
+https://www.youtube.com/watch?v=nx6DFeNIXlA
+*/
+```
 
 
 
@@ -838,31 +858,6 @@ elem.querySelector(css) // Современный способ
 ```
 
 
-
-## Get/Set
-```javascript
-class GetThings {
-  constructor(size) {
-    this.length = size;
-  }
-  
-  get Length() {
-    return this.length;
-  }
-  
-  set Lenght(value) {
-    this.length = value;
-    console.log('Значение установленно');
-  }  
-}
-
-/*
-var thing = new GetThings(9);
-thing.Length;
-thing.Length = 10;
-https://www.youtube.com/watch?v=nx6DFeNIXlA
-*/
-```
 
 ## Обработчики события
 ### Обработка событий через атрибут (быстрый способ на коленке)

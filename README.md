@@ -255,7 +255,30 @@ console.log(value1) // false;
 console.log(value2) // true;
 ```
 
-* **filter** — ???
+Вместо стрелочной функции можно сделать и развернутую запись, так же все методы иттерирования по массивам, колбэк функция принимает 3 параметра: элемент, индекс и сам массив.
+
+```javascript
+const value3 = data.every(function(i, index, array){
+	return i > 3;
+});
+```
+
+
+### filter
+Возвращает массив элементов, которые удовлетворяют заданным условиям.
+
+```javascript
+const users = [
+	{ id: 1, name: 'John', isAdmin: true },
+	{ id: 1, name: 'Smith', isAdmin: true },
+	{ id: 1, name: 'David', isAdmin: true }
+];
+
+const filtred = users.filter(i => item.id == 2);
+console.log(filtered);
+```
+
+### map
 
 
 ## Методы массивов

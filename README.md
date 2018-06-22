@@ -280,14 +280,41 @@ console.log(filtered);
 
 ### map
 
+### reduce
+сумма всех элементов массива
 
 ## Методы массивов
-* **reduce** — сумма всех элементов массива
-* **concat** — конкатенация массивов
-* **push/pop** — чуть более удобный способ удаления/добавления элементов массива
-* **join** — разделитель между элементов массива
-* **reverse** — данный метод изменяет исходный массив. После его применения порядок элементов в массиве меняется на обратный
-* **sort** — сортировка
+
+### Push
+Чтобы добавить элемент к концу массива, воспользуйтесь методом push. Введите .push после имени массива, а после в круглых скобках укажите элемент который нужно добавить.
+
+```javascript
+var animals = [],
+animals.push('Кот');
+animals.push('Пес');
+animals.push('Лама');
+
+console.log(animals.length) // 3
+```
+
+### Pop
+Убрать из элемента последний элемент можно, добавив к его имени .pop(). Метод pop делает сразу два дела: удаляет последний элемент из массива и возвращает этот элемент в виде значения.
+
+### Shift
+
+### Unshift
+
+### Сoncat
+Конкатенация массивов
+
+### Join
+Разделитель между элементов массива
+
+### Reverse
+Данный метод изменяет исходный массив. После его применения порядок элементов в массиве меняется на обратный
+
+### Sort
+Сортировка
 
 
 
@@ -1151,4 +1178,116 @@ function createEmail(to, from, subject, message) {
 createEmail(meeq@yamoney.ru, mikhail@koloskov.kz, Привет!, Как дела?);
 ```
 ## Модули
-...
+
+Вы можете дробить код на отдельные модули. В JavaScript один модуль — это один файл.
+Объединение кода, расположенного в разных модулях, происходит через:
+
+1. Экспорт чего-то из модуля.
+2. Импорт в другой модуль.
+
+### Экспорт и два способа импорта
+
+Поставьте **export** перед тем, что вы хотите экспортировать. Такая операция сделает это импортируемым куда угодно:
+
+```javascript
+export const pi = 3.14;
+export const e = 2.718;
+
+export const square = (x) => {
+  return x * x;
+};
+
+export const surfaceArea = (r) => {
+  return 4 * pi * square(r);
+};
+```
+
+Импортируйте специфичные штуки таким способом:
+
+```javascript
+import { surfaceArea, square } from './math';
+
+const surfaceOfMars = surfaceArea(3390);
+const surfaceOfMercury = surfaceArea(2440);
+const yearSquared = square(2017);
+```
+
+'./math' означает "из файла math.js, расположенного в той же (текущей) папке".
+
+Или импортируйте всё:
+
+```javascript
+import * as mathematics from './math';
+
+const surfaceOfMars = mathematics.surfaceArea(3390);
+const surfaceOfMercury = mathematics.surfaceArea(2440);
+const yearSquared = mathematics.square(2017);
+```
+Это значит: "импортировать весь модуль и назвать его mathematics в этом модуле". Вот почему к импортированным сущностям обращение происходит через mathematics вот так: mathematics.surfaceArea.
+
+### Экспорт по умолчанию
+
+Вы можете сделать одну позицию экспортируемой по умолчанию.
+
+```javascript
+const pi = 3.14;
+const e = 2.718;
+
+const square = (x) => {
+  return x * x;
+};
+
+const surfaceArea = (r) => {
+  return 4 * pi * square(r);
+};
+
+export default surfaceArea;
+```
+
+Можно также экспортировать функцию или константу без имени:
+
+```javascript
+const pi = 3.14;
+const e = 2.718;
+
+const square = (x) => {
+  return x * x;
+};
+
+export default (r) => {
+  return 4 * pi * square(r);
+};
+```
+
+Импортирование чего-то, что было экспортировано по умолчанию:
+
+```javascript
+import surfaceArea from './math';
+
+const surfaceOfMars = surfaceArea(3390);
+```
+
+При экспорте функции без имени, её имя в модуле будет определяться в момент импорта, т.е. один и тот же экспорт может иметь разные имена в разных модулях:
+
+
+**math.js**
+
+```javascript
+export default () => {
+  ///
+};
+```
+
+**import1.js:**
+
+```javascript
+import something1 from './math';
+```
+
+
+**import2.js:**
+
+```javascript
+import something2 from './math';
+```
+

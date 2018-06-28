@@ -48,7 +48,7 @@ var obj = {name: "sorax"}
 ### Получаем длину строки
 ```javascript
 var string = "terrible";
-string.lenght; // 8
+string.length; // 8
 
 '42'.length;   // 2
 ```
@@ -94,7 +94,7 @@ string.lenght; // 8
 ```javascript
 var a = 42; // 42
 a.toString(); // '42'
-a.toString().lenght; // 2 (так как длина это число мы получаем строку)
+a.toString().length; // 2 (так как длина это число мы получаем строку)
 a.toString().length.toString(); // '2' (и теперь обратно переводим это число в строку)
 ```
 
@@ -115,7 +115,7 @@ a + '' === 'foo';
 ```javascript
 'Blink ' + 182 // 'Blink 182' (так есть строка, у нас все склеивается и мы получаем строку)
 
-'Blink ' + 182 + 1 // 'Blink 1811' (ситуация аналогичная, не смотря на то, что у нас два числа. Все равно все склеится, так как у нас есть строка)
+'Blink ' + 182 + 1 // 'Blink 1821' (ситуация аналогичная, не смотря на то, что у нас два числа. Все равно все склеится, так как у нас есть строка)
 
 'Blink ' + (181 + 1) // 'Blink 182' (тут мы получим нужный результат, так как мы выводим математическую операцию "сложение" в скобки. На выходе мы получаем склеивание строки с результатом замкнутой математической операции)
 ```
@@ -192,7 +192,7 @@ var c = newArray(3);
 ```javascript
 var a = ['a', 'b', 'c'];
 a.length; // 3
-
+а
 a[0] // 'a'
 a[1] // 'b'
 a[2] // 'c'
@@ -207,7 +207,7 @@ a[10] = 'what?'
 И длина нашего массива становится равной 11 (индекс последнего элемента + 1) не смотря на то, что у нас
 образовалось пропасть между элементами с индексами 2 и 10
 ```javascript
-a.lenght; // 11
+a.length; // 11
 ```
 
 
@@ -228,7 +228,7 @@ a.lenght; // 11
 
 ### Через for
 ```javascript
-for(var i=0; i < a.lenght; i++) {
+for(var i=0; i < a.length; i++) {
   // выведет все элементы массива (рекомендуется использовать forEach)
 }
 ```
@@ -546,7 +546,7 @@ var name = {
 	second: 'Will'
 };
 
-Object.луны(name);  // [first, second]
+Object.keys(name);  // [first, second]
 ```
 
 ### Атрибуты свойств (Object.defineProperty)
@@ -565,8 +565,8 @@ class GetThings {
   get Length() {
     return this.length;
   }
-
-  set Lenght(value) {
+  
+  set Length(value) {
     this.length = value;
     console.log('Значение установленно');
   }
@@ -688,7 +688,7 @@ while
 ## Функции
 Функция - это объект
 
-* Со свойствами name, lenght и prototype;
+* Со свойствами name, length и prototype;
 * Может использоваться как любой другой объект: хранить в переменных, других объектах (Если функция находится внутри объекта, то мы называем эту функцию методом), передаваться как аргумент, возвращать как значение;
 * Функциям можно задавать свойства и методы;
 * В отличии от других объектов функцию можно вызвать.
@@ -1004,7 +1004,7 @@ document.body.firstChild
 ```
 
 ```javascript
-document.body.firstNodes[0]
+document.body.childNodes[0]
 ```
 
 ```javascript
@@ -1086,7 +1086,7 @@ elem.querySelector(css) // Современный способ
 ```javascript
 var li = document.querySelector('li'); //получаем ссылку на элементы
 li.onclick = function(){ // и ставим ему свойство
-  alert('привет')l
+  alert('привет');
 }
 ```
 
@@ -1105,7 +1105,7 @@ function sayHi2(){
 }
 
 li.addEventListener('click', sayHi, false);
-li.addEventListener('click', sayHi, false);
+li.addEventListener('click', sayHi2, false);
 ```
 
 

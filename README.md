@@ -539,7 +539,7 @@ var karma = {
 Object.assign(name, karma);  // Object.assign(target, ...sources)
 ```
 
-### Можно пожно получить массив всех ключей объекта
+### Можно получить массив всех ключей объекта
 ```javascript
 var name = {
 	first: 'Mike',

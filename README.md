@@ -297,7 +297,7 @@ const users = [
 	{ id: 1, name: 'David', isAdmin: true }
 ];
 
-const filtred = users.filter(i => item.id == 2);
+const filtred = users.filter(i => i.id == 2);
 console.log(filtered);
 ```
 

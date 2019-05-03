@@ -339,11 +339,11 @@ console.log(mapped);
 
 ```javascript
 var array = [1, 2, 3, 4],
-var raducedValue = array.raduce(function(acc, element, index){
+var reducedValue = array.reduce(function(acc, element, index){
 	return acc + element
 });
 
-console.log(raducedValue);
+console.log(reducedValue);
 ```
 
 ## Методы массивов
